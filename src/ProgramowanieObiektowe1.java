@@ -81,7 +81,12 @@ public class ProgramowanieObiektowe1 {
         void wypisz(String name,String surname){
             System.out.println("Imie "+name +" \nNazwisko "+surname +"\n");
         }
+
         int dodaj(int a,int b){
+            return a + b;
+        }
+
+        double dodaj(double a,double b){
             return a + b;
         }
         double dziel(double a,double b){
