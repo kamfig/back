@@ -27,7 +27,19 @@ public class ProgramowanieObiektowe1 {
         System.out.println("P: x;y = "+p.x+" "+p.y);
         System.out.println("P2: x;y = "+p2.x+" "+p2.y);
 
+        Metodowa metodowa = new Metodowa();
+        metodowa.wypisz("kamil","kamil2");
 
+        Metodowa metodowa1 = new Metodowa();
+        metodowa1.wypisz("kamilek","kamilek");
+
+        System.out.println("-----------Oddzielenie -----------");
+
+        int wynik = metodowa.dodaj(100,99);
+        System.out.println(wynik);
+
+        double wynik2 = metodowa.dziel(100,10);
+        System.out.println(wynik2);
     }
 }
 
@@ -39,8 +51,9 @@ public class ProgramowanieObiektowe1 {
 
         }
         void off(){
-
+                // metoda funkcyjna
         }
+
     }
     class Pont{
 
@@ -50,11 +63,32 @@ public class ProgramowanieObiektowe1 {
             x = 20;
             y = 20;
         }
-        Pont(int pierwszzy, int drugi){
+        Pont(int x, int y){
             System.out.println("Konstruktor p2 z 2 parametrami int");
-            x = pierwszzy;
-            y=drugi;
+           this.x = x;
+            this.y = y;
         }
         int x;
         int y;
+    }
+
+    class Metodowa{
+        // funkcja - metoda, która jest poza klasą (dziala niejako samoistnie). W javie Wewnątrz klasy wszystko Wiec nazywa się metoda
+
+        void wypisz(){
+            System.out.println("Metodowa z konstr. domyslnego - hahahah - tada");
+        }
+        void wypisz(String name,String surname){
+            System.out.println("Imie "+name +" \nNazwisko "+surname +"\n");
+        }
+        int dodaj(int a,int b){
+            return a + b;
+        }
+        double dziel(double a,double b){
+            if (b==0)
+                return 0; // po 1 returnie reszta zostanie pominieta
+            //wypisanie jak ok
+            return a/b;
+
+        }
     }
