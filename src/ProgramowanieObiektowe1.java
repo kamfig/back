@@ -40,6 +40,11 @@ public class ProgramowanieObiektowe1 {
 
         double wynik2 = metodowa.dziel(100,10);
         System.out.println(wynik2);
+        System.out.println("\n-----------Oddzielenie -----------");
+
+        Matematyka test = new Matematyka();
+        double wynik11 = test.dodaj(10,12);
+        System.out.println(wynik11);
     }
 }
 
@@ -96,4 +101,21 @@ public class ProgramowanieObiektowe1 {
             return a/b;
 
         }
+    }
+
+        // statyczna metoda - istnieje zawsznei, nie ma potrzeby tworzenia instancji klasy - odwołanie do metody poprzez . - po klasie
+        // przy stałych zmiennych - tak jak z klasa, aby dostep był dostepny po kropce z klasy
+    class Matematyka{
+       static final double PI = 3.14;
+        static double dodaj(double a, double b){
+            return a+b;
+        }
+    }
+
+    class Klient{
+        Klient(String name){
+            this.name = name;
+        }
+        String name;
+        int id;
     }
